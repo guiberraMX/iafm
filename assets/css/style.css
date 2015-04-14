@@ -161,7 +161,7 @@ blockquote .cite {
   padding-left: 30px;
 }
 blockquote .cite p {
-  font-family: "Titillium Web";
+  font-family: 'Titillium Web' !important;
   font-size: 24px;
   
   color: #19191A;
@@ -174,7 +174,7 @@ blockquote .cite footer {
 body {
   background-color: #DCDCDB;
   color: #5a5a5a;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web' !important;
 }
 
 dl {
@@ -238,7 +238,7 @@ hr.divider {
 p {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web" !important;
 }
 
 section {
@@ -1548,7 +1548,7 @@ ul.list-links li a:hover {
 .bookmark-added:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -1670,7 +1670,7 @@ ul.list-links li a:hover {
 ****/
 .cite {
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Titillium Web", serif;
+  font-family: 'Titillium Web' !important;
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0;
@@ -2867,7 +2867,7 @@ ul.list-links li a:hover {
 .property-carousel .owl-controls .owl-prev:after, .property-carousel .owl-controls .owl-next:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -2924,7 +2924,7 @@ ul.list-links li a:hover {
 .property-features-list li:before {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -3357,7 +3357,7 @@ ul.list-links li a:hover {
 #slider .homepage-slider .owl-controls .owl-prev:after, #slider .homepage-slider .owl-controls .owl-next:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -3394,7 +3394,7 @@ ul.list-links li a:hover {
 .show-all:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -3462,7 +3462,7 @@ ul.list-links li a:hover {
 .submit-pricing table tbody tr.buttons td:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -4253,7 +4253,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   opacity: 0;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -4313,7 +4313,7 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="search"]:hover,
   opacity: 0;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -4523,7 +4523,7 @@ form label.error:before {
   opacity: 0;
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web';
+  font-family: 'Titillium Web' !important;
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -4607,7 +4607,7 @@ form label.error:before {
 }
 
 .jslider {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web' !important;
   top: 12px;
 }
 .jslider .jslider-value {
