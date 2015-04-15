@@ -33,6 +33,15 @@ Headers:		'Roboto', sans-serif;
 
 /* 1. Element Styling */
 
+
+.nosos{
+  font-size: 1.2em !important;
+  text-align: justify;
+  margin: 0px 100px ;
+}
+
+
+
 .slide img{
   max-width: 100%;
     height: auto;
@@ -1008,10 +1017,10 @@ ul.list-links li a:hover {
 ****/
 #about-us #ceo-section .cite-title {
   font-size: 36px;
-  font-weight: lighter;
+  font-weight: 700;
 }
 #about-us #ceo-section h3 {
-  color: #073855;
+  color: #D26F2C;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -1422,7 +1431,7 @@ ul.list-links li a:hover {
 .banner .title {
   color: #DCDCDB;
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 600;
   width: 70%;
 }
 .banner .submit {
@@ -2259,11 +2268,15 @@ ul.list-links li a:hover {
   padding-left: 130px;
 }
 .member h3 {
-  color: #073855;
+  color: #E09F33;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 0;
+}
+
+.member h3:hover {
+  color: #D9892E !important;
 }
 .member .image {
   left: 0;
@@ -3135,8 +3148,11 @@ ul.list-links li a:hover {
 #sidebar h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-  margin-top: 21px;
+  
   padding-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: #D26F2C;
 }
 #sidebar form .btn {
   width: 100%;
@@ -5121,6 +5137,16 @@ body, html {
     width: inherit !important;
   }
 }
+
+
+@media (max-width: 768px) {
+  .nosos{
+  font-size: 1.2em !important;
+  text-align: justify;
+  margin: 0px 16px ;
+}
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .agency address {
     margin-left: 10px;
