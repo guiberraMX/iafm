@@ -82,6 +82,7 @@ background-size: 15px 30px;
 .cocolor{
   background-color: #3E3E3D;
   
+  
 }
 
 .idioma{
@@ -230,7 +231,7 @@ hr.thick {
   border-width: 2px;
 }
 hr.divider {
-  border-color: #1396e2;
+  border-color: #D26F2C;
   border-width: 2px;
   width: 40px;
 }
@@ -1745,9 +1746,31 @@ ul.list-links li a:hover {
   margin-right: 10px;
 }
 
+
+
+
+
+
+
+
+
+
 /****
   D
 ****/
+
+
+
+
+
+.premio img{
+  max-width: 50% !important;
+}
+
+
+
+
+
 .display-lines .property {
   border-bottom: 2px solid #f3f3f3;
   padding-left: 280px;
@@ -1768,6 +1791,12 @@ ul.list-links li a:hover {
   top: 0;
   overflow: hidden;
   width: 260px;
+}
+
+.property-image a{
+  color: #1B1B1C;
+
+  font-size: 1em;
 }
 .display-lines .property .type {
   top: 0;
