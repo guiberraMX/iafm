@@ -40,6 +40,26 @@ Headers:		'Roboto', sans-serif;
   margin: 0px 100px ;
 }
 
+.nosocolor{
+  background-color: #444444;
+}
+
+.nos2{
+  font-size: 1.4em !important;
+  text-align: justify;
+  margin: 0px 100px ;
+  font-weight: 600 !important;
+  color: #D26F2C;
+}
+
+.nos3{
+  font-size: 1.2em !important;
+  text-align: justify;
+  margin: 0px 100px ;
+  font-weight: 600 !important;
+  
+}
+
 
 
 .slide img{
@@ -1016,7 +1036,7 @@ ul.list-links li a:hover {
   6. Content
 ****/
 #about-us #ceo-section .cite-title {
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
 }
 #about-us #ceo-section h3 {
