@@ -33,7 +33,9 @@ Headers:		'Roboto', sans-serif;
 
 /* 1. Element Styling */
 
-
+.mision{
+  color: #DCDCDB;
+}
 .nosos{
   font-size: 1.2em !important;
   text-align: justify;
