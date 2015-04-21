@@ -33,6 +33,12 @@ Headers:		'Roboto', sans-serif;
 
 /* 1. Element Styling */
 
+.premio22{
+  font-size: 1.3em !important;
+  font-weight: 600 !important; 
+  color: #D26F2C !important;
+}
+
 .mision{
   color: #DCDCDB;
 }
@@ -1810,7 +1816,13 @@ ul.list-links li a:hover {
 
 }
 
-
+.cuadrito{
+  background-color: #EFEFED;
+  padding: 0.8em !important;
+  margin-left: 0px !important;
+  
+  
+}
 
 
 
