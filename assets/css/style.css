@@ -3870,13 +3870,13 @@ ul.list-links li a:hover {
   display: table-cell;
 }
 .universal-button figure {
-  color: #1396e2;
-  font-size: 28px;
+  color: #E09F33;
+  font-size: 23px;
   width: 40px;
 }
 .universal-button .arrow {
   bottom: 0;
-  color: #1396e2;
+  color: #E09F33;
   height: 15px;
   margin: auto;
   position: absolute;
