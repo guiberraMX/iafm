@@ -3006,7 +3006,7 @@ ul.list-links li a:hover {
 
 .property-features-list li {
   display: inline-block;
-  padding: 5px 0;
+  padding: 0px 0;
   width: 49%;
 }
 .property-features-list li:before {
@@ -3023,7 +3023,7 @@ ul.list-links li a:hover {
   font-size: 8px;
   position: relative;
   bottom: 2px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .property-title {
