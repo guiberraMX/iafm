@@ -47,6 +47,17 @@
 </head>
 
 <body class="page-sub-page page-property-detail" id="page-top">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <!-- Wrapper -->
 <div class="wrapper">
     <!-- Navigation -->
@@ -271,8 +282,7 @@
                     </section><!-- /#property-detail -->
                 </div><!-- /.col-md-9 -->
                 <!-- end Property Detail Content -->
-
-                <div class="col-md-3 col-sm-3">
+    <div class="col-md-3 col-sm-3">
                     <section id="sidebar">
                         
                         <aside id="featured-properties">
@@ -280,24 +290,31 @@
                             <br><br><br>
                             
                         </aside><!-- /#featured-properties -->
-                       <aside id="our-guides">
-                            <header><h3>¡Comparte esto!</h3><p>¿Conóces a alguien que le puede interesar?</p></header>
+                        <aside id="our-guides">
+                            <header><h3>¡Comparte esto!</h3></header>
 
-                            <a href="#" class="universal-button">
-                                <figure class="fa fa-mail-forward"></figure>
-                                <span>Enviar por mail</span>
-                                <span class="arrow fa fa-angle-right"></span>
-                            </a><!-- /.universal-button -->
-                            <a href="#" class="universal-button">
-                                <figure class="fa fa-facebook"></figure>
-                                <span>Comparte en Facebook</span>
-                                <span class="arrow fa fa-angle-right"></span>
-                            </a><!-- /.universal-button -->
+                        
+                                <div class="fb-share-button" data-href="http://i-afm.com/electro.html" data-layout="box_count"></div>
+
+                                <br>
+                                <br>
+
+
+                                <div>
+                               <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://i-afm.com/electro.html" data-size="large" data-hashtags="IAFM">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    
+                                </div>
+
+
+                           
                             
                         </aside><!-- /#our-guide -->
                     </section><!-- /#sidebar -->
                 </div><!-- /.col-md-3 -->
                 <!-- end Sidebar -->
+
 
 
 
