@@ -42,7 +42,35 @@
 
     </style>
 
-   
+   <script type="text/javascript" src="/assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/js/angular-route.min.js"></script>
+    
+    
+    <script type="text/javascript">
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when("/:language", {
+                templateUrl: "languageTemplate",
+                controller: "languageController"
+            })
+            .otherwise({
+                redirectTo: "/es"
+            });
+        });
+        app.controller("controller", function($scope){});
+        app.controller("languageController", function($scope, $routeParams, $http){
+             var idioma = $routeParams.language || "es";
+            $http.get("/home_language", {
+                params: {
+                    language: idioma
+                }
+            }).success(function(data){
+                $scope.$parent.lang = data;
+                $scope.$parent.lang_str = idioma;
+            });
+        });
+    </script>
 
 </head>
 
@@ -59,7 +87,10 @@
 
 
 <!-- Wrapper -->
-<div class="wrapper">
+<div class="wrapper" data-ng-app="app" data-ng-controller="controller">
+    <script type="text/ng-template" id="languageTemplate"></script>
+    <ng-view></ng-view>
+    
     <!-- Navigation -->
     <div class="navigation fibredark ">
         <div class="secondary-navigation idioma">
@@ -74,21 +105,21 @@
                         
                     </div>
                     <div class="language-bar">
-                        <a href="#" class="active"><img src="assets/img/flags/gb.png" alt=""></a>
-                        <a href="#"><img src="assets/img/flags/de.png" alt=""></a>
+                        <a href="#/es" class="active"><img src="assets/img/flags/gb.png" alt="">Español</a>
+                        <a href="#/de"><img src="assets/img/flags/de.png" alt="">Deuch</a>
                         <a href="#"><img src="assets/img/flags/es.png" alt=""></a>
                     </div>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-left" role="navigation">
                     <ul class="nav navbar-nav nave" >
-                        <li><a href="mig.html">MIG/MAG</a></li>
-                        <li><a href="tig.html">TIG</a></li>
-                        <li><a href="electro.html">Electrodo</a></li>
-                        <li><a href="calor.html">Área Caliente</a></li>
-                        <li><a href="montaje.html">Montaje</a></li>
-                        <li><a href="automatizacion.html">Automatización</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="mig.html#/{{lang_str}}">{{lang.menu1}}</a></li>
+                        <li><a href="tig.html#/{{lang_str}}">{{lang.menu2}}</a></li>
+                        <li><a href="electro.html#/{{lang_str}}">{{lang.menu3}}</a></li>
+                        <li><a href="calor.html#/{{lang_str}}">{{lang.menu4}}</a></li>
+                        <li><a href="montaje.html#/{{lang_str}}">{{lang.menu5}}</a></li>
+                        <li><a href="automatizacion.html#/{{lang_str}}">{{lang.menu6}}</a></li>
+                        <li><a href="nosotros.html#/{{lang_str}}">{{lang.menu7}}</a></li>
+                        <li><a href="contacto.html#/{{lang_str}}">{{lang.menu8}}</a></li>
                     </ul>
                 </nav><!-- /.navbar collapse-->
             </div>
@@ -131,8 +162,8 @@
                 <div class="col-md-9 col-sm-9">
                     <section id="property-detail">
                         <header class="property-title">
-                            <h1>Manten tu ritmo de producción</h1>
-                            <figure>Trabaja en áltas temperaturas</figure>
+                            <h1>{{lang.calor_title1}}</h1>
+                            <figure>{{lang.calor_subtitle1}}</figure>
                             <span class="actions">
                                 <!--<a href="#" class="fa fa-print"></a>-->
                                 
@@ -209,17 +240,15 @@
                             
                             <div class="col-md-12 col-sm-12">
                                 <section id="description">
-                                    <header><h2>¿Cómo funciona el sistema en áltas temperaturas?</h2></header>
-                                    <p>
-                                        Este tipo de trabajo permite hacer inspecciones y reparaciones a equipos que trabajan a altas temperaturas como hornos y cabinas sin necesidad de apagar o reducir su temperatura, permitiéndole mantener su ritmo de producción y su productividad.
-                                    </p>
+                                    <header><h2>{{lang.calor_title2}}</h2></header>
+                                    <p>{{lang.calor_p1}}</p>
                                     
 
 
                                 </section><!-- /#description -->
 
                                  <section id="description">
-                                    <header><h2>Conóce nuestro trabajo con Cementos Argos</h2></header>
+                                    <header><h2>{{lang.calor_title3}}</h2></header>
                                     
                                     
 
@@ -307,7 +336,7 @@
                                 
                                 <hr class="thick">
                                 <section id="similar-properties">
-                                    <header><h2 class="no-border">Otros trabajos realizados:</h2></header>
+                                    <header><h2 class="no-border">{{lang.calor_title4}}</h2></header>
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6">
                                             <div class="property">
@@ -375,7 +404,7 @@
                             
                         </aside><!-- /#featured-properties -->
                         <aside id="our-guides">
-                            <header><h3>¡Comparte esto!</h3></header>
+                            <header><h3>{{lang.calor_share}}</h3></header>
 
                         
                                 <div class="fb-share-button" data-href="http://i-afm.com/calor.html" data-layout="box_count"></div>
