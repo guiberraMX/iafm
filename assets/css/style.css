@@ -48,6 +48,20 @@ Headers:		'Roboto', sans-serif;
   margin: 0px 100px ;
 }
 
+
+
+
+
+.no-border2 {
+  border: none !important;
+  font-size: 1.5em !important;
+  text-align: justify;
+  margin: 70px 100px ;
+}
+
+
+
+
 .nosocolor{
   background-color: #444444;
 }
