@@ -961,6 +961,7 @@ ul.list-links li a:hover {
 }
 .navigation .secondary-navigation .user-area .language-bar {
     float: right;
+
 }
 .navigation .secondary-navigation figure {
     display: inline-block;
@@ -2193,7 +2194,7 @@ ul.list-links li a:hover {
 ****/
 .language-bar {
   float: right;
-  margin-left: 15px;
+  margin-left: 35px;
 }
 .language-bar a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
@@ -2201,7 +2202,7 @@ ul.list-links li a:hover {
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  margin-left: 5px !important;
+  margin-left: 15px !important;
 }
 .language-bar a.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
