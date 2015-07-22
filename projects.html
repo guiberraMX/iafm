@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,300,600,400,700,900' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,300,600,400,700,900' rel='stylesheet' type='text/css'>
 
-    <title>Montaje | I.A.F.M.</title>
+    <title>Projects | I.A.F.M.</title>
 
     <style type="text/css">
 
@@ -41,12 +41,42 @@
    
 
     </style>
-
     
+    <script type="text/javascript" src="/assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/js/angular-route.min.js"></script>
+    
+    <script type="text/javascript">
+        var app = angular.module("app", ["ngRoute"]);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when("/:language", {
+                templateUrl: "languageTemplate",
+                controller: "languageController"
+            })
+            .otherwise({
+                redirectTo: "/es"
+            });
+        });
+        app.controller("controller", function($scope){});
+        app.controller("languageController", function($scope, $routeParams, $http){
+             var idioma = $routeParams.language || "es";
+            $http.get("/home_language", {
+                params: {
+                    language: idioma
+                }
+            }).success(function(data){
+                $scope.$parent.lang = data;
+                $scope.$parent.lang_str = idioma;
+            });
+        });
+    </script>
+
+   
 
 </head>
 
 <body class="page-sub-page page-property-detail" id="page-top">
+
 
 
 <div id="fb-root"></div>
@@ -60,8 +90,12 @@
 
 
 
+
+
 <!-- Wrapper -->
-<div class="wrapper">
+<div class="wrapper" data-ng-app="app" data-ng-controller="controller">
+    <script type="text/ng-template" id="languageTemplate"></script>
+    <ng-view></ng-view>
     <!-- Navigation -->
     <div class="navigation fibredark ">
         <div class="secondary-navigation idioma">
@@ -83,14 +117,14 @@
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-left" role="navigation">
                     <ul class="nav navbar-nav nave" >
-                        <li><a href="mig.html">MIG/MAG</a></li>
-                        <li><a href="tig.html">TIG</a></li>
-                        <li><a href="electro.html">Electrodo</a></li>
-                        <li><a href="calor.html">Área Caliente</a></li>
-                        <li><a href="montaje.html">Montaje</a></li>
-                        <li><a href="automatizacion.html">Automatización</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="mig.html#/{{lang_str}}">{{lang.menu1}}</a></li>
+                        <li><a href="tig.html#/{{lang_str}}">{{lang.menu2}}</a></li>
+                        <li><a href="electro.html#/{{lang_str}}">{{lang.menu3}}</a></li>
+                        <li><a href="calor.html#/{{lang_str}}">{{lang.menu4}}</a></li>
+                        <li><a href="montaje.html#/{{lang_str}}">{{lang.menu5}}</a></li>
+                        <li><a href="automatizacion.html#/{{lang_str}}">{{lang.menu6}}</a></li>
+                        <li><a href="nosotros.html#/{{lang_str}}">{{lang.menu7}}</a></li>
+                        <li><a href="contacto.html#/{{lang_str}}">{{lang.menu8}}</a></li>
                         <li><a href="projects.html#/{{lang_str}}">{{lang.menu9}}</a></li>
                     </ul>
                 </nav><!-- /.navbar collapse-->
@@ -108,7 +142,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand nav" id="brand">
-                        <a href="index.html"><img src="assets/img/logo.png" width="28%" alt="brand"></a>
+                        <a href="index.html#/{{lang_str}}"><img src="assets/img/logo.png" width="28%" alt="brand"></a>
                     </div>
                 </div>
                 
@@ -122,8 +156,8 @@
         <!-- Breadcrumb -->
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="#">Soldadura</a></li>
-                <li class="active">Montaje</li>
+                <li><a href="#">{{lang.mig_bread_1}}</a></li>
+                <li class="active">{{lang.mig_bread_2}}</li>
             </ol>
         </div>
         <!-- end Breadcrumb -->
@@ -134,8 +168,8 @@
                 <div class="col-md-9 col-sm-9">
                     <section id="property-detail">
                         <header class="property-title">
-                            <h1>Eficiencia en cada montaje</h1>
-                            <figure>Alto nivel y detalle</figure>
+                            <h1>{{lang.mig_title1}}</h1>
+                            <figure>{{lang.subtitle1}}</figure>
                             <span class="actions">
                                 <!--<a href="#" class="fa fa-print"></a>-->
                                 
@@ -143,115 +177,69 @@
                         </header>
                         <section id="property-gallery">
                             <div class="owl-carousel property-carousel">
+                                <div class="property-slide">
+                                    <a href="assets/img/properties/property-06.jpg" class="image-popup">
+                                        <div class="overlay"><h3></h3></div>
+                                        <img alt="" src="assets/img/properties/property-06.jpg">
+                                    </a>
+                                </div><!-- /.property-slide -->
+
                                 
                                 <div class="property-slide">
-                                    <a href="assets/img/properties/mon1.jpg" class="image-popup">
+                                    <a href="assets/img/properties/property-detail-03.jpg" class="image-popup">
                                         <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon1.jpg">
+                                        <img alt="" src="assets/img/properties/property-detail-03.jpg">
                                     </a>
                                 </div><!-- /.property-slide -->
+
                                 
-
                                 <div class="property-slide">
-                                    <a href="assets/img/properties/mon3.jpg" class="image-popup">
+                                    <a href="assets/img/properties/property-12.jpg" class="image-popup">
                                         <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon3.jpg">
+                                        <img alt="" src="assets/img/properties/property-12.jpg">
                                     </a>
                                 </div><!-- /.property-slide -->
-
                                 <div class="property-slide">
-                                    <a href="assets/img/properties/mon4.jpg" class="image-popup">
+                                    <a href="assets/img/properties/property-02.jpg" class="image-popup">
                                         <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon4.jpg">
+                                        <img alt="" src="assets/img/properties/property-02.jpg">
                                     </a>
                                 </div><!-- /.property-slide -->
-
-                                <div class="property-slide">
-                                    <a href="assets/img/properties/mon5.jpg" class="image-popup">
-                                        <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon5.jpg">
-                                    </a>
-                                </div><!-- /.property-slide -->
-
-                                <div class="property-slide">
-                                    <a href="assets/img/properties/mon6.jpg" class="image-popup">
-                                        <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon6.jpg">
-                                    </a>
-                                </div><!-- /.property-slide -->
-
-                                <div class="property-slide">
-                                    <a href="assets/img/properties/mon7.jpg" class="image-popup">
-                                        <div class="overlay"><h3></h3></div>
-                                        <img alt="" src="assets/img/properties/mon7.jpg">
-                                    </a>
-                                </div><!-- /.property-slide -->
-
                             </div><!-- /.property-carousel -->
                         </section>
                         <div class="row">
                             
                             <div class="col-md-12 col-sm-12">
                                 <section id="description">
-                                    <header><h2>Montaje</h2></header>
-                                    <p>
-                                        IAFM Se encarga de emplazar cada componente de una estructura en su posición definitiva mediante un proceso de automatización.
+                                    <header><h2>{{lang.mig_title2}}</h2></header>
+                                    <p>{{lang.mig_p1_1}}</p>
+                                    <p>{{lang.mig_p1_2}}</p>
+                                    <p>{{lang.mig_p1_3}}</p>
 
-                                    </p>
-                                    <p>
-                                    Tipos de Montaje: Mecánico, Eléctrico, Hidráulico, Neumático, Estructural.
-
-                                    </p>
-
-                                    <p>
-                                    Mecánico: Técnica basada en el diseño, fabricación e instalación de sistemas y componentes mecánicos.
-                                    </p>
-
-                                    <p>
-                                    Eléctrico: Técnica basada en la colocación de circuitos eléctricos en un lugar específico para asegurar su correcto funcionamiento.
-
-                                    </p>
-                                    <p>
-                                        Hidráulico: Técnica basada en el diseño, fabricación e instalación de dispositivos que funcionen con líquidos y fluidos.
-                                    </p>
-
-                                    <p>
-                                        Neumático: Técnica basada en la aplicación de la sobrepresión o, presión de aire para la generación de movimientos y secuencias.
-
-                                    </p>
-
-                                    <p>
-                                        Estructural: Técnica basada en el diseño, fabricación e instalación de estructuras metálicas (Pilares, Vigas etc.) que constituyen el esqueleto de un edificio o la sustentación de una estructura mayor.
-                                    </p>
+                                    <p>{{lang.mig_p1_4}}</p>
 
 
                                 </section><!-- /#description -->
                                 <section id="property-features">
-                                    <header><h2>Beneficios:</h2></header>
+                                    <header><h2>{{lang.mig_title3}}</h2></header>
                                     <ul class="list-unstyled property-features-list">
-                                        <li>Realización de Proyectos en Conjunto.</li>
-                                        <li>Instalación en sitio.</li>
-                                        <li>Diseño de un Proyecto Ejecutivo.</li>
-                                        <li>Optimizar los Recursos Materiales y Humanos.</li>
+                                        <li>{{lang.mig_list1}}</li>
+                                        <li>{{lang.mig_list2}}</li>
+                                        <li>{{lang.mig_list3}}</li>
+                                        <li>{{lang.mig_list4}}</li>
+                                        <li>{{lang.mig_list5}}</li>
+                                        <li>{{lang.mig_list6}}</li>
+                                        <li>{{lang.mig_list7}}</li>
+                                        <li>{{lang.mig_list8}}</li>
                                         
                                     </ul>
                                 </section><!-- /#property-features -->
 
+                                <br>
+
                                 <section id="property-features">
-                                    <header><h2>Aplicaciones típicas:</h2></header>
-                                    <ul class="list-unstyled property-features-list">
-                                       
-                                       <br>
-                                        
-                                        <li>Fabricación y Montaje de Cualquier Estructura Metálica.</li>
-
-                                        <li>Diseño Arquitectónico.</li>
-
-                                        <li>Montaje Estructural en Industria: Cementera, Automotriz, Minera.</li>
-
-
-                                                                        
-                                    </ul>
+                                    <header><h3>{{lang.mig_p2}}</h3></header>
+                                    
                                 </section><!-- /#property-features -->
 
 
@@ -260,12 +248,51 @@
                                 
                                 
                             </div><!-- /.col-md-8 -->
+
+
+                            <div class="col-md-12 col-sm-12">
+                                <section id="description">
+                                    <header><h2>{{lang.mig_title4}}</h2></header>
+                                    <p>{{lang.mig_p3_1}}</p>
+                                    <p>{{lang.mig_p3_2}}</p>
+                                    <p>{{lang.mig_p3_3}}</p>
+                                    <p>{{lang.mig_p3_4}}</p>
+
+
+                                </section><!-- /#description -->
+                                
+                                
+
+                                
+                                
+                                
+                                
+                            </div><!-- /.col-md-8 -->
+
+
+
                             <div class="col-md-12 col-sm-12">
                                 
                                 <hr class="thick">
                                 <section id="similar-properties">
-                                    <header><h2 class="no-border">Trabajos realizados:</h2></header>
+                                    <header><h2 class="no-border">{{lang.mig_title5}}</h2></header>
                                     <div class="row">
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="property">
+                                                <a href="monterrey.html">
+                                                    <div class="property-image">
+                                                        <img alt="" src="assets/img/properties/monte2.jpg">
+                                                    </div>
+                                                    <div class="overlay">
+                                                        <div class="info">
+                                                            <div class="tag price">Monterrey</div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </a>
+                                            </div><!-- /.property -->
+                                        </div><!-- /.col-md-3 -->
                                         <div class="col-md-4 col-sm-6">
                                             <div class="property">
                                                 <a href="palme.html">
@@ -274,7 +301,7 @@
                                                     </div>
                                                     <div class="overlay">
                                                         <div class="info">
-                                                            <div class="tag price">Aceros Palme</div>
+                                                            <div class="tag price">Palme</div>
                                                             
                                                         </div>
                                                         
@@ -284,29 +311,13 @@
                                         </div><!-- /.col-md-3 -->
                                         <div class="col-md-4 col-sm-6">
                                             <div class="property">
-                                                <a href="peru.html">
+                                                <a href="tig.html">
                                                     <div class="property-image">
-                                                        <img alt="" src="assets/img/properties/mon3.jpg">
+                                                        <img alt="" src="assets/img/properties/tige1.jpg">
                                                     </div>
                                                     <div class="overlay">
                                                         <div class="info">
-                                                            <div class="tag price">Montaje</div>
-                                                            
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </a>
-                                            </div><!-- /.property -->
-                                        </div><!-- /.col-md-3 -->
-                                        <div class="col-md-4 col-sm-6">
-                                            <div class="property">
-                                                <a href="monterrey.html">
-                                                    <div class="property-image">
-                                                        <img alt="" src="assets/img/properties/electrodo13.jpg">
-                                                    </div>
-                                                    <div class="overlay">
-                                                        <div class="info">
-                                                            <div class="tag price">Electródo</div>
+                                                            <div class="tag price">TIG</div>
                                                             
                                                         </div>
                                                         
@@ -324,7 +335,8 @@
                 </div><!-- /.col-md-9 -->
                 <!-- end Property Detail Content -->
 
-               <div class="col-md-3 col-sm-3">
+                <!-- sidebar -->
+                <div class="col-md-3 col-sm-3">
                     <section id="sidebar">
                         
                         <aside id="featured-properties">
@@ -333,17 +345,18 @@
                             
                         </aside><!-- /#featured-properties -->
                         <aside id="our-guides">
-                            <header><h3>¡Comparte esto!</h3></header>
+                            <header><h3>{{lang.mig_share_title}}</h3></header>
 
                         
-                                <div class="fb-share-button" data-href="http://i-afm.com/montaje.html" data-layout="box_count"></div>
+                                <div class="fb-share-button" data-href="http://i-afm.com/mig.html" data-layout="box_count"></div>
 
                                 <br>
                                 <br>
 
 
                                 <div>
-                               <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://i-afm.com/montaje.html" data-size="large" data-hashtags="IAFM">Tweet</a>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-hashtags="IAFM">Tweet</a>
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     
@@ -356,11 +369,6 @@
                     </section><!-- /#sidebar -->
                 </div><!-- /.col-md-3 -->
                 <!-- end Sidebar -->
-
-
-
-
-
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
