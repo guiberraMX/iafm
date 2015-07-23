@@ -3328,7 +3328,7 @@ ul.list-links li a:hover {
   transition: 0.2s;
   color: #fff;
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   margin-bottom: 20px;
   width: 100%;
   z-index: 2;
@@ -3393,6 +3393,8 @@ ul.list-links li a:hover {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
   left: 0px;
+
+
 }
 #slider .homepage-slider .slide .overlay .info.animate-description-in h3 {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -5837,12 +5839,12 @@ body, html {
     float: none;
   }
   .navigation .secondary-navigation .user-area a {
-    color: #fff;
+    color: #E09F33;
     margin-left: 0;
     margin-right: 10px;
   }
   .navigation .secondary-navigation .user-area a:hover {
-    color: #fff;
+    color: #E09F33;
   }
 
   .owl-controls {
