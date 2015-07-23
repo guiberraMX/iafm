@@ -2950,7 +2950,7 @@ ul.list-links li a:hover {
   font-variant: normal;
   line-height: 1;
   text-transform: none;
-  color: #fff;
+  color: #fff !important;
   width: 5px;
   height: 15px;
   position: absolute;
