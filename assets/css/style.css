@@ -2937,7 +2937,7 @@ ul.list-links li a:hover {
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  background-color: #E09F33;
+  
   display: inline-block !important;
   width: 50px;
   height: 50px;
@@ -2947,13 +2947,14 @@ ul.list-links li a:hover {
 .property-carousel .owl-controls .owl-prev:after, .property-carousel .owl-controls .owl-next:after {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web' !important;
+  font-family: 'fontawesome' !important;
   speak: none;
   font-weight: normal;
+  font-size: 50px !important;
   font-variant: normal;
   line-height: 1;
   text-transform: none;
-  color: #fff !important;
+  color: #E09F33 !important;
   width: 5px;
   height: 15px;
   position: absolute;
@@ -3004,7 +3005,7 @@ ul.list-links li a:hover {
 .property-features-list li:before {
   text-shadow: none;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Titillium Web' !important;
+  font-family: 'fontawesome';
   speak: none;
   font-weight: normal;
   font-variant: normal;
@@ -3466,6 +3467,8 @@ ul.list-links li a:hover {
 #slider .homepage-slider .owl-controls .owl-prev:after {
   content: "\f104";
   left: 20px;
+
+
 }
 
 .show-all {
