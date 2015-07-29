@@ -62,7 +62,7 @@
     "mig_title1": "La mejor apariencia y acabado",
     "mig_subtitle1": "Alta productividad",
     "mig_share_title": "Descarga para más imformación",
-    "mig_title2": "Qué es el sistema MIG/MAG?",
+    "mig_title2": "¿Qué es el sistema MIG/MAG?",
     "mig_p1_1": "La soldadura MIG/MAG es un proceso por arco bajo gas protector con electrodo consumible, el arco se produce mediante un electrodo formado por un hilo continuo y unas piezas a unir, quedando este protegido de la atmosfera circundante por un gas inerte (soldadura MIG) o por un gas activo (soldadura MAG). ",
     "mig_p1_2": "La soldadura MIG/MAG es un proceso versátil, pudiendo depositar el metal a una gran velocidad y en todas las posiciones, este procedimiento es muy utilizado en espesores pequeños y medios en estructuras de acero y aleaciones de aluminio, especialmente donde se requiere una gran trabajo manual. ",
     "mig_p1_3": "En la variante MIG (Metal Inert Gas), el gas de protección es inerte (no actúa activamente en el proceso de la soldadura) siendo muy estable. ",
@@ -176,5 +176,6 @@
     "auto_4": "Proyectos de Automatización",
     "auto_5": "Procesos de Automatización",
     "audi_1": "Montaje de línea de producción en carrocería para la Q5.",
-    "vw_1": "Montaje de linea de producción para Jeta A6 y Golf A7."
+    "vw_1": "Montaje de linea de producción para Jeta A6 y Golf A7.",
+    "proj_1": ""
 }
