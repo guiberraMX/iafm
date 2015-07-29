@@ -322,7 +322,7 @@ ul.list-links li a {
   padding-left: 0;
 }
 ul.list-links li a:hover {
-  color: #D26F2C;
+  color: #1396e2;
   padding-left: 5px;
 }
 
@@ -861,7 +861,7 @@ ul.list-links li a:hover {
     line-height: 1;
     text-transform: none;
     background-color: transparent;
-    color: #D26F2C;
+    color: #1396e2;
     content: "\f105";
     height: 14px;
     position: absolute;
@@ -4920,7 +4920,7 @@ form label.error:before {
   background-color: #073855;
 }
 .horizontal-search .search-box-wrapper .search-box .form-map .selectpicker .caret:after {
-  color: #D26F2C;
+  color: #1396e2;
 }
 .horizontal-search .search-box-wrapper .search-box .form-map .jslider-label, .horizontal-search .search-box-wrapper .search-box .form-map .jslider-value {
   color: #5a5a5a;
@@ -5775,7 +5775,7 @@ body, html {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: transparent;
-    color: #D26F2C !important;
+    color: #1396e2;
   }
   .navigation .navbar .navbar-nav li .child-navigation li:hover .child-navigation {
     height: auto;
